@@ -37,7 +37,7 @@ public class WeatherRVAdapter extends RecyclerView.Adapter<WeatherRVAdapter.View
     public void onBindViewHolder(@NonNull WeatherRVAdapter.ViewHolder holder, int position) {
         WeatherRVModel model = weatherRVModelArrayList.get(position);
         holder.temperatureTV.setText(model.getTemperature()+"°C");
-        Picasso.get().load("http://".concat(model.getIcon())).into(holder.conditionTV);
+        Picasso.get().load("https://".concat(model.getIcon())).into(holder.conditionTV);
         holder.windTV.setText(model.getWindSpeed()+"Km/h");
         SimpleDateFormat input = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         SimpleDateFormat output = new SimpleDateFormat("hh:mm aa");
